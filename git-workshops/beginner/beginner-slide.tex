@@ -267,6 +267,42 @@
   \end{block}
 \end{frame}
 
+%-14-%
+\begin{frame}[fragile]
+  \frametitle{Basic commands - Tagging}
+  \begin{block}{Types}
+    \textbf{Annotated}
+    \begin{verbatim}
+      * stored as full objects in the Git database
+      * they’re checksummed
+      * contain the tagger name, email, and date
+      * have a tagging message
+      * git tag -a v1.4 -m "my version 1.4"
+    \end{verbatim}
+    \pause
+    \textbf{Lightweight}
+    \begin{verbatim}
+      * like a branch that doesn’t change
+      * it’s just a pointer to a specific commit
+      * git tag v1.4
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
+%-15-%
+\begin{frame}[fragile]
+  \frametitle{Basic commands - Tagging}
+  \begin{block}{Samples}
+    \begin{verbatim}
+      $ git tag
+      $ git tag -l "v1.8.5*" # Pattern search
+      $ git push origin v1.5
+      $ git push origin --tags
+      $ git checkout -b version2 v2.0.0
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
 %-x-%
 \begin{frame}
   \begin{center}

@@ -115,6 +115,27 @@
   \end{block}
 \end{frame}
 
+%-7-%
+\begin{frame}[fragile]
+  \frametitle{File states}
+  \textbf{Recording Changes to the Repository (States)}
+  \begin{itemize}
+    \item \alert{Committed}, data is safely stored in your local database.
+    \item \alert{Modified}, changed the file but have not committed it to your database yet.
+    \item \alert{Staged}, marked a modified file in its current version to go into your next commit snapshot.
+  \end{itemize}
+  \begin{block}{Samples}
+    \begin{verbatim}
+      $ git status
+      On branch master
+      Your branch is up-to-date with 'origin/master'.
+      nothing to commit, working directory clean
+
+      $ git status -s  # Short Status
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
 %-x-%
 \begin{frame}
   \begin{center}

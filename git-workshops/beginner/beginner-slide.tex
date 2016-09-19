@@ -163,6 +163,110 @@
   \medskip
 \end{frame}
 
+%-9-%
+\begin{frame}[fragile]
+  \frametitle{Basic commands}
+  \begin{block}{Viewing Your Staged and Unstaged Changes}
+    \begin{verbatim}
+      $ git status
+      $ git diff
+      $ git diff --cached | git diff --staged
+    \end{verbatim}
+  \end{block}
+  \pause
+  \begin{block}{Committing Your Changes}
+    \begin{verbatim}
+      $ git commit
+      $ git commit -m "Commit Message"
+      $ git commit --amend # Undoing Things
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
+%-10-%
+\begin{frame}[fragile]
+  \frametitle{Basic commands}
+  \begin{block}{Removing Files}
+    \begin{verbatim}
+      $ git rm filename
+      $ git rm --cached README
+      $ git rm log/\*.log
+    \end{verbatim}
+  \end{block}
+  \pause
+  \begin{block}{Moving Files}
+    \begin{verbatim}
+      $ git mv README.md README
+
+      $ mv README.md README
+      $ git rm README.md
+      $ git add README
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
+%-11-%
+\begin{frame}[fragile]
+  \frametitle{Basic commands}
+  \begin{block}{Viewing the Commit History}
+    \begin{verbatim}
+      $ git log
+      $ git log -p
+      $ git log --stat
+      $ git log --pretty=oneline
+      $ git log --pretty=format:"%h - %an, %ar : %s"
+      $ git log --graph
+    \end{verbatim}
+  \end{block}
+  \pause
+  \begin{block}{Limiting Log Output}
+    \begin{verbatim}
+      $ git log --since=2.weeks
+      $ git log --author 'ashiksp@gmail.com
+      $ git log -Sfunction_name'
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
+%-12-%
+\begin{frame}[fragile]
+  \frametitle{Basic commands}
+  \begin{block}{Unstaging a Staged File}
+    \begin{verbatim}
+      $ git reset HEAD
+      $ git reset HEAD CONTRIBUTING.md
+    \end{verbatim}
+  \end{block}
+  \pause
+  \begin{block}{Unmodifying a Modified File}
+    \begin{verbatim}
+      $ git checkout .
+      $ git checkout -- CONTRIBUTING.md
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
+%-13-%
+\begin{frame}[fragile]
+  \frametitle{Basic commands}
+  \begin{block}{Working with Remotes}
+    \begin{verbatim}
+      $ git remote # Showing Your Remotes
+      $ git remote -v # Show with urls\
+      $ git remote show origin # Inspecting a Remote
+      $ Add remote reference:
+      $   git remote add remote-name https://url.git
+      $ Fetching and Pulling from Your Remotes:
+      $   git fetch [remote-name]
+      $ Pushing to Your Remotes:
+      $   git push origin master
+      $ Removing and Renaming Remotes:
+      $   git remote rename old-name new-name
+      $   git remote rm remote-name
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
 %-x-%
 \begin{frame}
   \begin{center}

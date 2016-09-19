@@ -136,6 +136,33 @@
   \end{block}
 \end{frame}
 
+%-8-%
+\begin{frame}[fragile]
+  \frametitle{Ignoring Files}
+  \textbf{Need git to ignore specific file patterns - .gitignore}
+  \medskip
+  \begin{block}{Samples}
+    \begin{verbatim}
+      # no .a files
+      *.a
+
+      # but do track lib.a, even though you're ignoring
+      # .a files above
+      !lib.a
+
+      # ignore all files in the build/ directory
+      build/
+
+      # ignore doc/notes.txt, but not doc/server/arch.txt
+      doc/*.txt
+
+      # ignore all .pdf files in the doc/ directory
+      doc/**/*.pdf
+    \end{verbatim}
+  \end{block}
+  \medskip
+\end{frame}
+
 %-x-%
 \begin{frame}
   \begin{center}

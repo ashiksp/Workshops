@@ -74,6 +74,30 @@
   \end{itemize}
 \end{frame}
 
+%-5-%
+\begin{frame}[fragile]
+  \frametitle{Getting started - Git}
+  \textbf{Installation}
+  \begin{exampleblock}{Note !}
+    If you understand what Git is and the fundamentals of how it works, then using Git effectively
+    will probably be much easier for you.
+  \end{exampleblock}
+  \textbf{Customizations} \\
+  \text{Files: /etc/gitconfig, .git/config, ~/.config/git/config}
+  \pause
+  \begin{block}{Samples}
+    \begin{verbatim}
+      $ git config --global user.name "Ashik Salman"
+      $ git config --global user.email ashiksp@gmail.com
+      $ git config --global core.editor vim
+      $ git config --list , Explore more !
+
+      $ git config --global alias.co checkout
+      $ git config --global alias.unstage 'reset HEAD --'
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
 %-x-%
 \begin{frame}
   \begin{center}

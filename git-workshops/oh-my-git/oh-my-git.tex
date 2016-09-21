@@ -198,6 +198,26 @@
   \end{example}
 \end{frame}
 
+%-14-%
+\begin{frame}[fragile]
+  \frametitle{oh-my-git !!!}
+  \begin{block}{Total mess-up !}
+    \begin{verbatim}
+      # Suppose only one branch went terribly wrong...!
+      $ git checkout branch-name
+      $ git reset HEAD~50 --hard
+      $ git pull upstream branch-name
+      $ git push origin -f branch-name
+
+      # Delete the repo and clone a fresh one.
+      $ cd ..
+      $ sudo rm -r messed-git-repo-dir
+      $ git clone https://some.github.url/messed-git-repo-dir.git
+      $ cd messed-git-repo-dir
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
 %-x-%
 \begin{frame}
   \begin{center}

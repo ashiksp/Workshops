@@ -43,6 +43,88 @@
 \end{frame}
 
 %-4-%
+\begin{frame}[fragile]
+  \frametitle{Git with Patches}
+  \begin{block}{Add changes by patches}
+    \begin{verbatim}
+      $ git add -p
+      $ git add -i (interactive menu)
+    \end{verbatim}
+  \end{block}
+  \pause
+  \begin{block}{Checkout changes by patches(Remove un-staged changes)}
+    \begin{verbatim}
+      $ git checkout -p
+    \end{verbatim}
+  \end{block}
+  \pause
+  \begin{block}{Reset changes by patches(Remove staged changes)}
+    \begin{verbatim}
+      $ git reset -p
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
+%-5-%
+\begin{frame}
+  \frametitle{oh-my-git !!!}
+  \begin{alertblock}{Scenario 1}
+    I did something terribly wrong, I want to got to a stage where everything worked fine.
+  \end{alertblock}
+  \pause
+  \begin{block}{Why... ?}
+    You can use this to get back stuff you accidentally deleted, or just to remove some stuff you
+    tried that broke the repo, or to recover after a bad merge, or just to go back to a time when things actually worked.
+  \end{block}
+\end{frame}
+
+%-6-%
+\begin{frame}[fragile]
+  \frametitle{oh-my-git !!!}
+  \begin{example}[Solution]
+    \begin{verbatim}
+      $ git reflog
+      # you will see a list of every thing you've done in git, across all branches!
+      # each one has an index HEAD@{index}
+      # find the one before you broke everything
+      $ git reset HEAD@{index}
+    \end{verbatim}
+  \end{example}
+  \pause
+  \begin{block}{Note !}
+    If the work was committed at any point, then it can be recovered from the reflog.
+    By default all commits stay alive in the reflog for at least 2 weeks.
+  \end{block}
+\end{frame}
+
+%-7-%
+\begin{frame}
+  \frametitle{oh-my-git !!!}
+  \begin{alertblock}{Scenario 2}
+    I just committed some changes and immediately realized I need to make one small change.
+  \end{alertblock}
+\end{frame}
+
+%-8-%
+\begin{frame}[fragile]
+  \frametitle{oh-my-git !!!}
+  \begin{example}[Solution]
+    \begin{verbatim}
+      # make your change
+      $ git add .  # or add individual files
+      $ git commit --amend
+      # follow prompts to change or keep the commit message
+      # now your last commit contains that change!
+    \end{verbatim}
+  \end{example}
+  \pause
+  \begin{block}{Note !}
+    You could also make the change as a new commit and then do rebase -i in order to squash them both together,
+    but this is about a million times faster.
+  \end{block}
+\end{frame}
+
+%-x-%
 \begin{frame}
   \begin{center}
     \Huge{Git Merge (Conflicts!!!)}

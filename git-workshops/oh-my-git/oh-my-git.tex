@@ -218,11 +218,75 @@
   \end{block}
 \end{frame}
 
-%-x-%
+%-15-%
 \begin{frame}
   \begin{center}
     \Huge{Git Merge (Conflicts!!!)}
   \end{center}
+\end{frame}
+
+%-16-%
+\begin{frame}[fragile]
+  \frametitle{oh-my-git !!!}
+  \begin{block}{Basic Merge !}
+    \begin{verbatim}
+       $ git checkout master
+       # Switched to branch 'master'
+       $ git merge iss53
+       # Merge made by the 'recursive' strategy.
+       # index.html |    1 +
+       # 1 file changed, 1 insertion(+)
+
+       $ git fetch & git merge == git pull
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
+%-17-%
+\begin{frame}[fragile]
+  \frametitle{oh-my-git !!!}
+  \begin{block}{Basic Merge conflicts}
+    \begin{verbatim}
+       $ git merge feature-branch
+       # Auto-merging index.html
+       # CONFLICT (content): Merge conflict in index.html
+       # Automatic merge failed; fix conflicts and then commit the result.
+
+       # <<<<<<< HEAD:index.html
+       # <div id="footer">contact : email.support@github.com</div>
+       # =======
+       # <div id="footer">
+       #  please contact us at support@github.com
+       # </div>
+       # >>>>>>> feature-branch:index.html
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
+%-18-%
+\begin{frame}[fragile]
+  \frametitle{oh-my-git !!!}
+    \begin{block}{Abort merge}
+      \begin{verbatim}
+         $ git merge --abort
+    \end{verbatim}
+    \end{block}
+    \pause
+    \begin{block}{Fix files}
+      \begin{verbatim}
+         $ Fix conflicts manually
+         $ git add files
+         $ git commit
+    \end{verbatim}
+    \end{block}
+     \pause
+    \begin{block}{Checkout files}
+      \begin{verbatim}
+         # Suppose you have conflict with a file
+         # which doesn't have any of your code in it.
+         $ git checkout master -- path/to/file-name
+    \end{verbatim}
+    \end{block}
 \end{frame}
 
 %-x-%

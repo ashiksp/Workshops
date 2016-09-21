@@ -152,6 +152,52 @@
   \end{block}
 \end{frame}
 
+%-11-%
+\begin{frame}
+  \frametitle{oh-my-git !!!}
+  \begin{alertblock}{Scenario 4}
+   Ooops..! I accidentally committed to the wrong branch!
+  \end{alertblock}
+\end{frame}
+
+%-12-%
+\begin{frame}[fragile]
+  \frametitle{oh-my-git !!!}
+  \begin{example}[Solution]
+    \begin{verbatim}
+     # undo the last commit, but leave the changes available
+     $ git reset HEAD~ --soft
+     $ git stash
+     # move to the correct branch
+     $ git checkout name-of-the-correct-branch
+     $ git stash pop
+     $ git add . # or add individual files
+     $ git commit -m "your message here"
+     # now your changes are on the correct branch
+    \end{verbatim}
+  \end{example}
+\end{frame}
+
+%-13-%
+\begin{frame}[fragile]
+  \frametitle{oh-my-git !!!}
+  \begin{block}{Note !}
+    A lot of people have suggested using cherry-pick for this situation too,
+    so take your pick on whatever one makes the most sense to you!
+  \end{block}
+  \pause
+  \begin{example}[Solution]
+    \begin{verbatim}
+      $ git checkout name-of-the-correct-branch
+      # grab the last commit to master
+      $ git cherry-pick master
+      # delete it from master
+      $ git checkout master
+      $ git reset HEAD~ --hard
+    \end{verbatim}
+  \end{example}
+\end{frame}
+
 %-x-%
 \begin{frame}
   \begin{center}

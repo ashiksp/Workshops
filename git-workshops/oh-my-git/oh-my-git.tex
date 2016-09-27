@@ -68,44 +68,12 @@
 %-5-%
 \begin{frame}
   \frametitle{oh-my-git !!!}
-  \begin{alertblock}{Scenario 1}
-    I did something terribly wrong, I want to got to a stage where everything worked fine.
-  \end{alertblock}
-  \pause
-  \begin{block}{Why... ?}
-    You can use this to get back stuff you accidentally deleted, or just to remove some stuff you
-    tried that broke the repo, or to recover after a bad merge, or just to go back to a time when things actually worked.
-  \end{block}
-\end{frame}
-
-%-6-%
-\begin{frame}[fragile]
-  \frametitle{oh-my-git !!!}
-  \begin{example}[Solution]
-    \begin{verbatim}
-      $ git reflog
-      # you will see a list of every thing you've done in git, across all branches!
-      # each one has an index HEAD@{index}
-      # find the one before you broke everything
-      $ git reset HEAD@{index}
-    \end{verbatim}
-  \end{example}
-  \pause
-  \begin{block}{Note !}
-    If the work was committed at any point, then it can be recovered from the reflog.
-    By default all commits stay alive in the reflog for at least 2 weeks.
-  \end{block}
-\end{frame}
-
-%-7-%
-\begin{frame}
-  \frametitle{oh-my-git !!!}
   \begin{alertblock}{Scenario 2}
     I just committed some changes and immediately realized I need to make one small change.
   \end{alertblock}
 \end{frame}
 
-%-8-%
+%-6-%
 \begin{frame}[fragile]
   \frametitle{oh-my-git !!!}
   \begin{example}[Solution]
@@ -124,7 +92,7 @@
   \end{block}
 \end{frame}
 
-%-9-%
+%-7-%
 \begin{frame}
   \frametitle{oh-my-git !!!}
   \begin{alertblock}{Scenario 3}
@@ -132,7 +100,7 @@
   \end{alertblock}
 \end{frame}
 
-%-10-%
+%-8-%
 \begin{frame}[fragile]
   \frametitle{oh-my-git !!!}
   \begin{example}[Solution]
@@ -152,7 +120,7 @@
   \end{block}
 \end{frame}
 
-%-11-%
+%-9-%
 \begin{frame}
   \frametitle{oh-my-git !!!}
   \begin{alertblock}{Scenario 4}
@@ -160,7 +128,7 @@
   \end{alertblock}
 \end{frame}
 
-%-12-%
+%-10-%
 \begin{frame}[fragile]
   \frametitle{oh-my-git !!!}
   \begin{example}[Solution]
@@ -178,7 +146,7 @@
   \end{example}
 \end{frame}
 
-%-13-%
+%-11-%
 \begin{frame}[fragile]
   \frametitle{oh-my-git !!!}
   \begin{block}{Note !}
@@ -198,6 +166,39 @@
   \end{example}
 \end{frame}
 
+%-12-%
+\begin{frame}
+  \frametitle{oh-my-git !!!}
+  \begin{alertblock}{Scenario 1}
+    I did something terribly wrong, I want to got to a stage where everything worked fine.
+  \end{alertblock}
+  \pause
+  \begin{block}{Why... ?}
+    You can use this to get back stuff you accidentally deleted, or just to remove some stuff you
+    tried that broke the repo, or to recover after a bad merge, or just to go back to a time when things actually worked.
+  \end{block}
+\end{frame}
+
+%-13-%
+\begin{frame}[fragile]
+  \frametitle{oh-my-git !!!}
+  \begin{example}[Solution]
+    \begin{verbatim}
+      $ git reflog
+      # you will see a list of every thing you've done in
+      # git, across all branches!
+      # each one has an index HEAD@{index}
+      # find the one before you broke everything
+      $ git reset HEAD@{index}
+    \end{verbatim}
+  \end{example}
+  \pause
+  \begin{block}{Note !}
+    If the work was committed at any point, then it can be recovered from the reflog.
+    By default all commits stay alive in the reflog for at least 2 weeks.
+  \end{block}
+\end{frame}
+
 %-14-%
 \begin{frame}[fragile]
   \frametitle{oh-my-git !!!}
@@ -212,7 +213,8 @@
       # Delete the repo and clone a fresh one.
       $ cd ..
       $ sudo rm -r messed-git-repo-dir
-      $ git clone https://some.github.url/messed-git-repo-dir.git
+      $ git clone
+      $  https://some.github.url/messed-git-repo-dir.git
       $ cd messed-git-repo-dir
     \end{verbatim}
   \end{block}
@@ -244,23 +246,22 @@
 
 %-17-%
 \begin{frame}[fragile]
-  \frametitle{oh-my-git !!!}
-  \begin{block}{Basic Merge conflicts}
-    \begin{verbatim}
-       $ git merge feature-branch
-       # Auto-merging index.html
-       # CONFLICT (content): Merge conflict in index.html
-       # Automatic merge failed; fix conflicts and then commit the result.
+  \frametitle{Basic Merge conflicts}
+   \begin{verbatim}
+   $ git merge feature-branch
+   # Auto-merging index.html
+   # CONFLICT (content): Merge conflict in index.html
+   # Automatic merge failed; fix conflicts and then
+   # commit the result.
 
-       # <<<<<<< HEAD:index.html
-       # <div id="footer">contact : email.support@github.com</div>
-       # =======
-       # <div id="footer">
-       #  please contact us at support@github.com
-       # </div>
-       # >>>>>>> feature-branch:index.html
-    \end{verbatim}
-  \end{block}
+   # <<<<<<< HEAD:index.html
+   # <div id="footer">contact : email.support@github.com</div>
+   # =======
+   # <div id="footer">
+   #  please contact us at support@github.com
+   # </div>
+   # >>>>>>> feature-branch:index.html
+   \end{verbatim}
 \end{frame}
 
 %-18-%
@@ -289,7 +290,7 @@
     \end{block}
 \end{frame}
 
-%-x-%
+%-19-%
 \begin{frame}
   \begin{center}
     \Huge{Git rebase - interactive (Conflicts !!!)}
@@ -314,7 +315,7 @@
 \begin{frame}
 	\frametitle{Questions?}
 	\begin{center}
-	\includegraphics[width=0.35\textwidth]{q5.jpg}
+	  \includegraphics[width=0.40\textwidth]{q5.jpg}
 	\end{center}
 \end{frame}
 

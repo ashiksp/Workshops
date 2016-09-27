@@ -297,6 +297,47 @@
   \end{center}
 \end{frame}
 
+%-20-%
+\begin{frame}
+	\frametitle{Git Rebase}
+	\begin{center}
+	  \includegraphics[width=0.90\textwidth]{rebase.png}
+	\end{center}
+\end{frame}
+
+%-21-%
+\begin{frame}
+  \frametitle{The Perils of Rebasing}
+  \begin{itemize}
+    \item Do not rebase commits that \alert<4>{exist outside your repository}.
+    \pause
+    \item Abandoning existing commits and \alert<4>{creating new ones that are similar but different}.
+    \pause
+    \item Collaborators will have to \alert<4>{re-merge their work} and things will get messy (If pushed to remote)
+    \pause
+    \item Now, to the question of whether merging or rebasing is better: hopefully you’ll see that it’s not that simple. Git is a powerful tool, and allows you to do many things to and with your history, but every team and every project is different. Now that you know how both of these things work, it’s up to you to decide which
+ one is best for your particular situation.
+  \end{itemize}
+\end{frame}
+
+%-22-%
+\begin{frame}
+  \frametitle{Rebase in action}
+  \begin{itemize}
+    \item Change old commit message.
+    \pause
+    \item Add/Remove changes to an old commit.
+    \pause
+    \item Squash/combine two or more commits.
+    \pause
+    \item Delete one or more old commits.
+    \pause
+    \item Split one old commit to multiple commits.
+    \pause
+    \item \alert{Explore more... !!!}
+  \end{itemize}
+\end{frame}
+
 %-x-%
 \begin{frame}
   \begin{center}
